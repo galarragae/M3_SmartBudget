@@ -24,7 +24,7 @@
       color: map-get($custom-colors, 'text-light') !important;
       flex: 1; // ocupa todo el espacio disponible
       display: flex;
-      justify-content: center; // centrados en tablet+
+      justify-content: center; // centrados en sm-desktop+
       gap: 1rem;
       padding: 0rem 2rem !important;
 

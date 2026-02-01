@@ -1,0 +1,24 @@
+// MANIFEST FILE (main.scss)
+// Respetar el orden para la compilación
+
+// ABSTRACTS
+@use './abstracts/variables';
+@use './abstracts/mixins';
+
+// VENDORS
+@use './vendors/bootstrap';
+
+
+// BASE
+@use './base/reset';
+
+// LAYOUT
+
+
+// COMPONENTS
+@use './components/navbar';
+
+// PAGES
+
+
+// THEMES

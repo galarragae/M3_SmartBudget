@@ -1,0 +1,43 @@
+// MEDIA QUERIES
+
+@mixin respond-to($breakpoint){
+  // X-Small devices (portrait phones, < 576px)
+  @if $breakpoint == 'xs-mobile' {
+    @media (max-width: 575px) {@content;}
+  }
+  // Small devices (landscape phones, ≥ 576px)
+  @else if $breakpoint == 'mobile' {
+    @media (min-width: 576px) {@content;}
+  }
+  // Medium devices (tablets, ≥768px)
+  @else if $breakpoint == 'tablet' {
+    @media (min-width: 768px) {@content;}
+  }
+  // Large devices (desktops, ≥992px)
+  @else if $breakpoint == 'sm-desktop' {
+    @media (min-width: 992px) {@content;}
+  }
+  // X-Large devices (large desktops, ≥1200px)
+  @else if $breakpoint == 'lg-desktop'{
+    @media (min-width: 1200px) {@content;}
+  }
+  // XX-Large devices (larger desktops, tv, ≥1400px)
+  @else if $breakpoint == 'xl-desktop' {
+    @media (min-width: 1400px) {
+      @content;
+    }
+  }
+}
+
+
+// NAVBAR TOGGLE COLLAPSE
+
+@mixin navbar-collapse($direction: column, $alignment: end, $gap: 0.5rem, $padding: 0){
+  display: flex;
+  flex-direction: $direction;
+  align-items: $alignment; // colo la dirección es columna, alignent alinea en horizontal
+  gap: $gap;
+  padding: $padding !important;
+}
+
+

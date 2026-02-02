@@ -4,9 +4,9 @@
 // (evita usar variables.$variable-name, sólo $variable-name)
 
 .navbar {
-  background-color: map-get($custom-colors, 'd-blue');
+  background-color: map-get($custom-colors, 'sb-dark');
   margin: 0;
-  padding: 1rem 2rem;
+  padding: 0.5rem 2rem;
   display: flex;
   min-width: fit-content;
   
@@ -79,9 +79,6 @@
     @include mixins.respond-to('mobile'){
       max-width: 15rem;
     }
-    @include mixins.respond-to('tablet'){
-      max-width: 20rem;
-    }
   }
 
 
@@ -107,3 +104,7 @@
     }
   }
 }
+
+// .nav-link {
+//   color: 
+// }

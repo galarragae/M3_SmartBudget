@@ -34,32 +34,45 @@
 <body>
 
   <!-- HEADER -->
-  <nav class="navbar navbar-expand-lg">
-    <a class="navbar-brand" href="#">
-      <img class="navbar__logo" src="./assets/img/prototipe/brand-logo.png" alt="SmartBudget-logo">
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler"
-      aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
-      <!-- Icono personalizado de Google Fonts -->
-      <span class="material-symbols-outlined"> menu </span>
-    </button>
-
-
-    <div class="collapse navbar-collapse" id="navbarToggler">
-      <ul class="navbar-nav navbar__items navbar__items--links">
-        <li class="nav-item active"><a class="nav-link" href="#">Inicio</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Beneficios</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Planes</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Nosotros</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
-      </ul>
-      <div class="navbar__items navbar__items--buttons text-nowrap">
-        <button class="btn btn-outline-custom-secondary" type="submit">Iniciar sesión</button>
-        <button class="btn btn-custom-primary" type="submit">Crea tu cuenta</button>
+  <header>
+    <nav class="navbar navbar-expand-lg sticky-top">
+      <a class="navbar-brand" href="#">
+        <img class="navbar__logo" src="./assets/img/brand-logo.png" alt="SmartBudget-logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler"
+        aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+        <!-- Icono personalizado de Google Fonts -->
+        <span class="material-symbols-outlined"> menu </span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarToggler">
+        <ul class="navbar-nav navbar__items navbar__items--links">
+          <li class="nav-item active"><a class="nav-link" href="#">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Beneficios</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Planes</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Nosotros</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
+        </ul>
+        <div class="navbar__items navbar__items--buttons text-nowrap">
+          <button class="btn btn-outline-sb-mint" type="submit">Iniciar sesión</button>
+          <button class="btn btn-sb-accent" type="submit">Crea tu cuenta</button>
+        </div>
       </div>
-    </div>
-  </nav>
+    </nav>
 
+    <!-- HERO SECTION -->
+    <section class="section__hero">
+
+      <div class="section__hero section__hero--text">
+        <h2>Gestiona tus finanzas <br>de forma inteligente</h2>
+        <p>Organiza tus gastos, ahorra más y <br>alcanza tus metas sin complicaciones</p>
+        <button class="btn btn-sb-accent" type="submit">Comienza ahora</button>
+      </div>
+      <div class="section__hero section__hero--img">
+        <img class="img-fluid" src="./assets/img/mobile-tablet-pc.png" alt="mobile-pc-tablet">
+      </div>
+
+    </section>
+  </header>
 </body>
 
 </html>

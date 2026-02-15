@@ -1,27 +1,34 @@
-@use '../abstracts/variables' as *;
-@use '../abstracts/mixins';
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins";
 // as * elimina el namespace y expone directamente las variables en el scope global del archivo donde se importan
 // (evita usar variables.$variable-name, sólo $variable-name)
 
 .navbar {
-  background-color: map-get($custom-colors, 'sb-dark');
+  background-color: color("sb-dark");
   margin: 0;
   padding: 0.5rem 2rem;
   display: flex;
   min-width: fit-content;
-  
+
   &__items {
+    // Override para el hover
+    .nav-link {
+      &:hover,
+      &:focus {
+        color: color("sb-accent");
+      }
+    }
 
     // En móviles: todo en columna
-    @include mixins.respond-to('xs-mobile') {
+    @include mixins.respond-to("xs-mobile") {
       @include mixins.navbar-collapse(column, flex-end, 0.5rem, 0);
     }
-    @include mixins.respond-to('mobile') {
+    @include mixins.respond-to("mobile") {
       @include mixins.navbar-collapse(column, flex-end, 0.75rem, 0);
     }
 
     &--links {
-      color: map-get($custom-colors, 'text-light') !important;
+      color: color("sb-mint") !important;
       flex: 1; // ocupa todo el espacio disponible
       display: flex;
       justify-content: center; // centrados en sm-desktop+
@@ -29,18 +36,18 @@
       padding: 0rem 2rem !important;
 
       // Override en móviles: columna
-      @include mixins.respond-to('xs-mobile') {
+      @include mixins.respond-to("xs-mobile") {
         @include mixins.navbar-collapse(column, flex-end, 0.5rem, 0);
       }
-      @include mixins.respond-to('mobile') {
+      @include mixins.respond-to("mobile") {
         @include mixins.navbar-collapse(column, flex-end, 0.5rem, 0);
       }
       // 'sm-desktop' en adelante: centrados con padding eje x
-      @include mixins.respond-to('sm-desktop') {
-        flex-direction: row;  // vuelve a fila
-        align-items: center;  // centra verticalmente
-        justify-content: center;   // los mantiene centrados
-        gap: 1.5rem;  // separación horizontal entre links
+      @include mixins.respond-to("sm-desktop") {
+        flex-direction: row; // vuelve a fila
+        align-items: center; // centra verticalmente
+        justify-content: center; // los mantiene centrados
+        gap: 1.5rem; // separación horizontal entre links
         padding: 0 3rem !important; // sin esto, prima la configuración de bootstrap
       }
     }
@@ -50,16 +57,16 @@
       display: flex;
 
       // Override en móviles: columna
-      @include mixins.respond-to('xs-mobile') {
+      @include mixins.respond-to("xs-mobile") {
         @include mixins.navbar-collapse(column, flex-end, 0.5rem, 0);
         padding-top: 2rem;
       }
-      @include mixins.respond-to('mobile') {
+      @include mixins.respond-to("mobile") {
         @include mixins.navbar-collapse(column, flex-end, 0.5rem, 0);
         padding-top: 0.5rem;
       }
       // 'sm-desktop' en adelante: fila a la derecha
-      @include mixins.respond-to('sm-desktop') {
+      @include mixins.respond-to("sm-desktop") {
         flex-direction: row;
         align-items: center;
         justify-content: flex-end;
@@ -68,43 +75,37 @@
       }
     }
   }
-  
 
   &__logo {
     align-items: center;
     padding-right: 0;
-    @include mixins.respond-to('xs-mobile'){
+    @include mixins.respond-to("xs-mobile") {
       max-width: 15rem;
     }
-    @include mixins.respond-to('mobile'){
+    @include mixins.respond-to("mobile") {
       max-width: 15rem;
     }
   }
 
-
   &-toggler {
-  border: 2px solid map-get($custom-colors, 'custom-primary');
-  border-radius: 6px;
-  padding: 0.25rem 0.5rem;
-  display: flex;
-  align-items: center;
+    border: 2px solid color("sb-accent");
+    border-radius: 6px;
+    padding: 0.25rem 0.5rem;
+    display: flex;
+    align-items: center;
 
     .material-symbols-outlined {
-      color: map-get($custom-colors, 'custom-primary');
+      color: color("sb-accent");
 
-      @include mixins.respond-to('xs-mobile'){
+      @include mixins.respond-to("xs-mobile") {
         font-size: 2rem;
       }
-      @include mixins.respond-to('mobile'){
+      @include mixins.respond-to("mobile") {
         font-size: 2rem;
       }
-      @include mixins.respond-to('tablet'){
+      @include mixins.respond-to("tablet") {
         font-size: 2.5rem;
       }
     }
   }
 }
-
-// .nav-link {
-//   color: 
-// }

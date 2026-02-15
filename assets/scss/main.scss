@@ -2,7 +2,7 @@
 // Respetar el orden para la compilación
 
 // ABSTRACTS
-@use './abstracts/variables';
+@use './abstracts/variables' as *; // al usarlo en en main.scss, el scope es global
 @use './abstracts/mixins';
 
 // VENDORS
@@ -16,7 +16,7 @@
 @use './layout/hero';
 
 
-// COMPONENTS
+// COMPONENTS  (Overrides y componentes personalizados)
 @use './components/navbar';
 
 // PAGES
